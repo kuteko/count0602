@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ViewController: UIViewController {
     
     @IBOutlet var label:UILabel!
     var num: Int=0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        SVProgressHUD.show()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +29,8 @@ class ViewController: UIViewController {
         
         num=num+1
         label.text=String(num)
+        SVProgressHUD.show()
+
         
     }
     @IBAction func minus(){
